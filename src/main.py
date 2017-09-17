@@ -10,6 +10,7 @@ import time
 
 
 
+import kernelmemorycheck as kmc
 
 
 def DoKernelMemoryAllocation(args):
@@ -19,7 +20,13 @@ def DoKernelMemoryAllocation(args):
    if args.check == "alloconly":
 
 
-      alloc_list = open(args.allocfile, "r")
+      alloc_f = open(args.allocfile, "r")
+      
+      alloc_list = []
+
+      for line in alloc_f:
+          alloc_list.add(line)      
+      kmc.CheckeKernel(alloc_list)
 
    if args.check == "both":
 
