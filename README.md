@@ -10,3 +10,26 @@ The purpose of the module is to :
 Build
 
 Usage
+
+Kernel:
+
+
+1. Specify kernel source directory.
+
+  $ KERNEL_SOURCE_DIR = ./home/user/linux-4.0.1/
+
+2. Specify race trigger C source
+
+   $exploit.c
+
+
+3. Specify race report + dangeroud memory function report
+
+
+   write [<ffffffff8147cf97>] ipc_addid+0x217/0x260 ipc/util.c:257 
+
+   read [<ffffffff8147d84d>] ipc_obtain_object_check+0x7d/0xd0 ipc/util.c:621 
+
+   strcpy [<ffffffff8147d84d>] ipc_obtain_object_check+0x7d/0xd0 ipc/util.c:625 
+
+4. Specify Crowdsource Benchmarks
