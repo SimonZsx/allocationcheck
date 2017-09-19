@@ -2,15 +2,13 @@
 
 import argparse
 import logging
-
 import re
+
 import signal
 import sys 
 import time
 
-
-
-import kernelmemorycheck as kmc
+import checker.kernelmemorycheck as kmc
 
 
 def DoKernelMemoryAllocation(args):
@@ -26,17 +24,21 @@ def DoKernelMemoryAllocation(args):
 
       for line in alloc_f:
           alloc_list.add(line)      
-      kmc.CheckeKernel(alloc_list)
+      kmc.CheckKernelMemoryAlloc(args, alloc_list)
 
    if args.check == "both":
 
       alloc_list = open(args.allocfile, "r")
-      mem_list = open(args.memfile, "r")
+      op_list = open(args.opfile, "r")
+
+      kmc.CheckKernelMemoryAllocAndUsage(args, alloc_list, op_list)
 
 
    if args.check == "memonly":
 
-      mem_list = open(args.memfile, "r")
+      op_list = open(args.opfile, "r")
+
+      kmc.CheckKernelMemoryUsage(args, op_list)
 
 
 def main(args):
