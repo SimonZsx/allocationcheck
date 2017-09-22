@@ -1,0 +1,2 @@
+qemu-system-x86_64: -net user,hostfwd=tcp:127.0.0.1:-:22: invalid host forwarding rule 'tcp:127.0.0.1:-:22'
+qemu-system-x86_64: -net user,hostfwd=tcp:127.0.0.1:-:22: Device 'user' could not be initialized
