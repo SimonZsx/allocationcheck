@@ -1,90 +1,90 @@
 WARNING: Image format was not specified for '/home/shixiong/linux_kernel/wheezy.img' and probing guessed raw.
          Automatically detecting the format is dangerous for raw images, write operations on block 0 will be restricted.
          Specify the 'raw' format explicitly to remove the restrictions.
-[    4.120945] loop: module loaded
-[    4.136872] scsi host0: ata_piix
-[    4.139214] scsi host1: ata_piix
-[    4.140209] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc080 irq 14
-[    4.140522] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc088 irq 15
-[    4.145816] e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
-[    4.146052] e100: Copyright(c) 1999-2006 Intel Corporation
-[    4.146302] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
-[    4.146599] e1000: Copyright (c) 1999-2006 Intel Corporation.
-[    4.148005] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
-[    4.148254] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
-[    4.148933] sky2: driver version 1.30
-[    4.150970] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
-[    4.151218] ehci-pci: EHCI PCI platform driver
-[    4.151611] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
-[    4.151940] ohci-pci: OHCI PCI platform driver
-[    4.152218] uhci_hcd: USB Universal Host Controller Interface driver
-[    4.154249] usbcore: registered new interface driver usblp
-[    4.154655] usbcore: registered new interface driver usb-storage
-[    4.155106] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
-[    4.157036] serio: i8042 KBD port at 0x60,0x64 irq 1
-[    4.157288] serio: i8042 AUX port at 0x60,0x64 irq 12
-[    4.159877] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
-[    4.162558] rtc_cmos 00:00: RTC can wake from S4
-[    4.164505] rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
-[    4.164939] rtc_cmos 00:00: alarms up to one day, 114 bytes nvram, hpet irqs
-[    4.169660] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
-[    4.170222] hidraw: raw HID events driver (C) Jiri Kosina
-[    4.176095] usbcore: registered new interface driver usbhid
-[    4.176291] usbhid: USB HID core driver
-[    4.178773] Netfilter messages via NETLINK v0.30.
-[    4.179701] nf_conntrack version 0.5.0 (512 buckets, 2048 max)
-[    4.180235] ctnetlink v0.93: registering with nfnetlink.
-[    4.182184] ip_tables: (C) 2000-2006 Netfilter Core Team
-[    4.182886] Initializing XFRM netlink socket
-[    4.185285] NET: Registered protocol family 10
-[    4.188146] Segment Routing with IPv6
-[    4.188458] ip6_tables: (C) 2000-2006 Netfilter Core Team
-[    4.189221] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
-[    4.190773] NET: Registered protocol family 17
-[    4.191066] 9pnet: Installing 9P2000 support
-[    4.191672] Key type dns_resolver registered
-[    4.193692] registered taskstats version 1
-[    4.195241]   Magic number: 1:261:570
-[    4.195810] console [netcon0] enabled
-[    4.195943] netconsole: network logging started
-[    4.196531] ALSA device list:
-[    4.196683]   No soundcards found.
-[    4.298321] ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
-[    4.298569] random: fast init done
-[    4.299200] ata2.00: configured for MWDMA2
-[    4.300269] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
-[    4.313256] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
-[    4.313527] cdrom: Uniform CD-ROM driver Revision: 3.20
-[    4.315916] sr 1:0:0:0: Attached scsi generic sg0 type 5
-[    4.787101] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
-[    4.788011] md: Waiting for all devices to be available before autodetect
-[    4.788264] md: If you don't use raid, use raid=noautodetect
-[    4.790494] md: Autodetecting RAID arrays.
-[    4.790678] md: autorun ...
-[    4.790766] md: ... autorun DONE.
-[    4.791436] EXT4-fs (vda): couldn't mount as ext3 due to feature incompatibilities
-[    4.792214] EXT4-fs (vda): couldn't mount as ext2 due to feature incompatibilities
-[    4.793842] EXT4-fs (vda): INFO: recovery required on readonly filesystem
-[    4.794109] EXT4-fs (vda): write access will be enabled during recovery
-[    4.810441] EXT4-fs (vda): recovery complete
-[    4.811810] EXT4-fs (vda): mounted filesystem with ordered data mode. Opts: (null)
-[    4.812115] VFS: Mounted root (ext4 filesystem) readonly on device 253:0.
-[    4.814787] devtmpfs: mounted
-[    4.818917] Freeing unused kernel memory: 1908K
-[    4.819074] Write protecting the kernel read-only data: 24576k
-[    4.820710] Freeing unused kernel memory: 1752K
-[    4.824729] Freeing unused kernel memory: 360K
+[    4.272600] loop: module loaded
+[    4.287394] scsi host0: ata_piix
+[    4.289285] scsi host1: ata_piix
+[    4.289985] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc080 irq 14
+[    4.290189] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc088 irq 15
+[    4.294541] e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+[    4.294739] e100: Copyright(c) 1999-2006 Intel Corporation
+[    4.295020] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    4.295260] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    4.295548] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    4.295732] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    4.296553] sky2: driver version 1.30
+[    4.297493] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    4.297689] ehci-pci: EHCI PCI platform driver
+[    4.299732] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    4.300095] ohci-pci: OHCI PCI platform driver
+[    4.300324] uhci_hcd: USB Universal Host Controller Interface driver
+[    4.301579] usbcore: registered new interface driver usblp
+[    4.302194] usbcore: registered new interface driver usb-storage
+[    4.302761] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    4.304615] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    4.304795] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    4.306742] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    4.310226] rtc_cmos 00:00: RTC can wake from S4
+[    4.311024] rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+[    4.311378] rtc_cmos 00:00: alarms up to one day, 114 bytes nvram, hpet irqs
+[    4.315427] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    4.316242] hidraw: raw HID events driver (C) Jiri Kosina
+[    4.320661] usbcore: registered new interface driver usbhid
+[    4.320803] usbhid: USB HID core driver
+[    4.323687] Netfilter messages via NETLINK v0.30.
+[    4.324151] nf_conntrack version 0.5.0 (512 buckets, 2048 max)
+[    4.324711] ctnetlink v0.93: registering with nfnetlink.
+[    4.325205] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.325487] Initializing XFRM netlink socket
+[    4.328528] NET: Registered protocol family 10
+[    4.331457] Segment Routing with IPv6
+[    4.331648] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    4.332495] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    4.333657] NET: Registered protocol family 17
+[    4.333991] 9pnet: Installing 9P2000 support
+[    4.334337] Key type dns_resolver registered
+[    4.335992] registered taskstats version 1
+[    4.337830]   Magic number: 1:762:12
+[    4.338027] console [netcon0] enabled
+[    4.338138] netconsole: network logging started
+[    4.338641] ALSA device list:
+[    4.338735]   No soundcards found.
+[    4.451184] ata2.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+[    4.452112] ata2.00: configured for MWDMA2
+[    4.453390] random: fast init done
+[    4.453596] scsi 1:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+[    4.466862] sr 1:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    4.467172] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    4.470150] sr 1:0:0:0: Attached scsi generic sg0 type 5
+[    4.931760] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    4.932715] md: Waiting for all devices to be available before autodetect
+[    4.932952] md: If you don't use raid, use raid=noautodetect
+[    4.935348] md: Autodetecting RAID arrays.
+[    4.935486] md: autorun ...
+[    4.935569] md: ... autorun DONE.
+[    4.936317] EXT4-fs (vda): couldn't mount as ext3 due to feature incompatibilities
+[    4.937174] EXT4-fs (vda): couldn't mount as ext2 due to feature incompatibilities
+[    4.938447] EXT4-fs (vda): INFO: recovery required on readonly filesystem
+[    4.938679] EXT4-fs (vda): write access will be enabled during recovery
+[    5.007488] EXT4-fs (vda): recovery complete
+[    5.008450] EXT4-fs (vda): mounted filesystem with ordered data mode. Opts: (null)
+[    5.008759] VFS: Mounted root (ext4 filesystem) readonly on device 253:0.
+[    5.010549] devtmpfs: mounted
+[    5.015279] Freeing unused kernel memory: 1908K
+[    5.015414] Write protecting the kernel read-only data: 24576k
+[    5.017122] Freeing unused kernel memory: 1752K
+[    5.021416] Freeing unused kernel memory: 360K
 SELinux:  Could not open policy file <= /etc/selinux/targeted/policy/policy.30:  No such file or directory
 INIT: version 2.88 booting
-[    4.855333] stty (1105) used greatest stack depth: 26984 bytes left
+[    5.048155] stty (1105) used greatest stack depth: 26984 bytes left
 [[36minfo[39;49m] Using makefile-style concurrent boot in runlevel S.
-[....] Starting the hotplug events dispatcher: udevd[    5.025993] udevd[1213]: starting version 175
+[....] Starting the hotplug events dispatcher: udevd[    5.224474] udevd[1213]: starting version 175
 [?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0c.
-[....] Synthesizing the initial hotplug events...[    5.205011] cdrom_id (1275) used greatest stack depth: 26544 bytes left
+[....] Synthesizing the initial hotplug events...[    5.393457] cdrom_id (1268) used greatest stack depth: 26544 bytes left
 [?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
 [....] Waiting for /dev to be fully populated...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
 [....] Activating swap...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
-[    5.578953] EXT4-fs (vda): re-mounted. Opts: (null)
+[    5.790472] EXT4-fs (vda): re-mounted. Opts: (null)
 [....] Cleaning up temporary files... /tmp[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0c.
 [....] Activating lvm and md swap...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
 [....] Checking file systems...fsck from util-linux 2.20.1
@@ -93,7 +93,7 @@ SELinux:  Could not open policy file <= /etc/selinux/targeted/policy/policy.30: 
 [....] Activating swapfile swap...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
 [....] Cleaning up temporary files...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0c.
 [....] Setting kernel variables ...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
-[....] Configuring network interfaces...[    6.507219] ip (2356) used greatest stack depth: 25208 bytes left
+[....] Configuring network interfaces...[    6.737956] ip (2359) used greatest stack depth: 25448 bytes left
 Internet Systems Consortium DHCP Client 4.2.2
 Copyright 2004-2011 Internet Systems Consortium.
 All rights reserved.
@@ -102,9 +102,11 @@ For info, please visit https://www.isc.org/software/dhcp/
 Listening on LPF/eth0/52:54:00:12:34:78
 Sending on   LPF/eth0/52:54:00:12:34:78
 Sending on   Socket/fallback
+DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 5
 DHCPREQUEST on eth0 to 255.255.255.255 port 67
+DHCPOFFER from 10.0.2.2
 DHCPACK from 10.0.2.2
-bound to 10.0.2.15 -- renewal in 37055 seconds.
+bound to 10.0.2.15 -- renewal in 37786 seconds.
 [?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
 [....] Cleaning up temporary files...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0c.
 INIT: Entering runlevel: 2
@@ -115,4 +117,16 @@ bound to 10.0.2.15 -- renewal in 37055 seconds.
 [r[H[J
 Debian GNU/Linux 7 hkucs-PowerEdge-R430-3 hvc0
 
-hkucs-PowerEdge-R430-3 login: [69773.385699] random: crng init done
+hkucs-PowerEdge-R430-3 login: root
+Last login: Thu Sep 21 06:35:21 UTC 2017 from 10.0.2.2 on pts/0
+Linux hkucs-PowerEdge-R430-3 4.12.1 #2 SMP Sat Sep 16 23:06:31 HKT 2017 x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@hkucs-PowerEdge-R430-3:~# ls
+index.html  openssh-server_7.5p1-10_amd64.deb
+root@hkucs-PowerEdge-R430-3:~# [ 5022.818817] random: crng init done
