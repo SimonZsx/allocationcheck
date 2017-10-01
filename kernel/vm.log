@@ -130,3 +130,33 @@ permitted by applicable law.
 root@hkucs-PowerEdge-R430-3:~# ls
 index.html  openssh-server_7.5p1-10_amd64.deb
 root@hkucs-PowerEdge-R430-3:~# [ 5022.818817] random: crng init done
+
+root@hkucs-PowerEdge-R430-3:~# 
+root@hkucs-PowerEdge-R430-3:~# quit    poweroff
+
+Broadcast message from root@hkucs-PowerEdge-R430-3 (hvc0) (Sun Oct  1 09:37:5The system is going down for system halt NOW!
+INIT: Switching to runlevel: 0
+INIT: Sending processes the TERM signal
+[[36minfo[39;49m] Using makefile-style concurrent boot in runlevel 0.
+[....] Asking all remaining processes to terminate...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
+[....] All processes ended within 1 seconds...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
+[....] Stopping enhanced syslogd: rsyslogd[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0c.
+[102995.292016] ip (3089) used greatest stack depth: 25368 bytes left
+[....] Deconfiguring network interfaces...Internet Systems Consortium DHCP Client 4.2.2
+Copyright 2004-2011 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/eth0/52:54:00:12:34:78
+Sending on   LPF/eth0/52:54:00:12:34:78
+Sending on   Socket/fallback
+DHCPRELEASE on eth0 to 10.0.2.2 port 67
+[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
+[[36minfo[39;49m] Saving the system clock.
+[[36minfo[39;49m] Hardware Clock updated to Sun Oct  1 09:37:57 UTC 2017.
+[....] Deactivating swap...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
+[....] Unmounting local filesystems...[?25l[?1c7[1G[[32m ok [39;49m8[?25h[?0cdone.
+[102996.919405] EXT4-fs (vda): re-mounted. Opts: (null)
+[[36minfo[39;49m] Will now halt.
+[102999.941747] ACPI: Preparing to enter system sleep state S5
+[102999.941996] reboot: Power down

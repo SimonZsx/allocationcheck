@@ -48,9 +48,17 @@ def CheckKernelMemoryAlloc(args):
 def setUpKernel(args):
 
 
-def setkprobe(ssh):
-    sin,sout,serr = ssh.exec_command("echo 'p:myprobe do_sys_open dfd=%ax filename=%dx flags=%cx mode=+4($stack)' > /sys/kernel/tracing/kprobe_events
-")
+
+def fetchreports():
+
+    cmd = ""
+    sin,sout,serr = ssh.exec_command(cmd)
+
+
+def setkprobe(ssh, func, name):
+
+    cmd = "echo 'p:"+name+" "+func+" filename=%cx input1=%di  input2=%si input3=%dx' > /sys/kernel/tracing/kprobe_events"
+    sin,sout,serr = ssh.exec_command(cmd)
     if serr not null:
         print("ERROR: "+serr)
         sys.exit(1)
@@ -58,9 +66,10 @@ def setkprobe(ssh):
         print("Successfully Enalbed Kprobe (SSH)")
 
 
-def setkretprobe(ssh):
-     sin,sout,serr = ssh.exec_command("echo 'r:myretprobe do_sys_open $retval' >> /sys/kernel/tracing/kprobe_events")
+def setkretprobe(ssh, func, name):
 
+    cmd = "echo 'r:"+name+" "+func+" retval=$retval' >> /sys/kernel/tracing/kprobe_events"
+    sin,sout,serr = ssh.exec_command(cmd)
     if serr not null:
         print("ERROR: "+serr)
         sys.exit(1)
@@ -86,10 +95,13 @@ def connectssh():
     except:
         print("SSH Connection Timeout")
         sys.exit(1)
+    else:
+        print("SSH Connected")
+
 
 def closessh(ssh):
     ssh.close()
-   
+     
 def runKernel(args):
 
 def fetchReport(args):
@@ -99,4 +111,4 @@ def main()
 
 
 if __name__ == "__main__":
-	main()
+    main()
