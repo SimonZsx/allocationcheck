@@ -30,7 +30,7 @@ func     file       size  time            mem
 malloc64 test0001.c 48    1038282.286875  fffffffffffffffe
 
 '''
-def CheckKernelMemoryAlloc(args):
+def CheckUserMemoryAlloc(args):
     
     ##setUpKernel(args)
 

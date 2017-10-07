@@ -3,8 +3,11 @@ import logging
 import re
 
 import signal
-import sys 
+import sys
+import os 
 import time
+
+import paramiko
 
 from .. import util.memoryAllocationParser as m_parser
 
@@ -29,10 +32,22 @@ malloc64 test0001.c 48    1038282.286875  fffffffffffffffe
 '''
 def CheckKernelMemoryAlloc(args):
     
-    setUpKernel(args)
+    ##setUpKernel(args)
 
-    runKernel(args)
+    ##runKernel(args)
 
+    ssh = setssh()
+
+    mount(ssh)
+
+
+    setMemFuncList(ssh, mem_func_list)
+
+    setOpFuncList(ssh, op_func_list)
+
+    for file_path in test_list:
+        runExec(ssh, file_path)
+    
     report = fetchReport(args)
 
     data = m_parser.parseMemAllocationReport(report)
@@ -41,13 +56,82 @@ def CheckKernelMemoryAlloc(args):
 
 def setUpKernel(args):
 
+
+
+
+def runExec(ssh, path):
+
+
+
+def fetchReports(ssh):
+
+    remote_path = "/sys/kernel/tracing/trace"
+    local_path = "./tmpreport"
+    sftp = ssh.open_sftp()
+    sftp.get(remote_path, local_path)
+    sftp.close()
+
+
+def setKprobe(ssh, func, name):
+
+    cmd = "echo \'p:"+name+" "+func+" filename=%%cx input1=%%di  input2=%%si input3=%%dx' > /sys/kernel/tracing/kprobe_events"
+    sin,sout,serr = ssh.exec_command(cmd)
+    if serr not null:
+        print("ERROR: "+serr)
+        sys.exit(1)
+    else:
+        print("Successfully Enalbed Kprobe (SSH)")
+
+
+def setKretprobe(ssh, func, name):
+
+    cmd = "echo \'r:"+name+" "+func+" retval=$retval\' >> /sys/kernel/tracing/kprobe_events"
+    sin,sout,serr = ssh.exec_command(cmd)
+    if serr.read() not null:
+        print("ERROR: "+serr)
+        sys.exit(1)
+    else:
+        print("Successfully Enalbed Kretprobe (SSH)")
+
+def setMemFuncList(ssh, func_list):
+
+    for func in func_list:
+        setKprobe(ssh, func, func)
+        setKretprobe(ssh, func, func)
+def setOpFuncList(ssh, func_list):  
+    for func in func_list:
+        setKprobe(ssh, func, func)
+
+def mount(ssh):
+    sin,sout,serr = ssh.exec_command("mount -t tracefs nodev /sys/kernel/tracing")
+
+    print("Successfully Mount (SSH)")
+
+def connectssh():
+
+    try:
+        ssh = paramiko.SSHClient()
+        ssh.load_system_host_keys()
+        ssh.connect("localhost",port="10022",username="root",password="")
+        return ssh
+    except paramiko.AuthenticationException:
+        print("SSH Authentication Failed")
+        sys.exit(1)
+    except:
+        print("SSH Connection Timeout")
+        sys.exit(1)
+    else:
+        print("SSH Connected")
+
+
+def closessh(ssh):
+    ssh.close()
+     
 def runKernel(args):
 
-def fetchReport(args):
 
-
-def main()
+def main():
 
 
 if __name__ == "__main__":
-	main()
+    main()
