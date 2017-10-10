@@ -74,7 +74,7 @@ def fetchReports(ssh):
 
 def setKprobe(ssh, func, name):
 
-    ## echo 'p:kmalloc __kmalloc filename=%cx input1=%di  input2=%si input3=%dx' > /sys/kernel/tracing/kprobe_events
+    ## echo 'p:myprobe __kmalloc filename=%cx input1=%di  input2=%si input3=%dx' > /sys/kernel/tracing/kprobe_events
     cmd = "echo \'p:"+name+" "+func+" filename=%%cx input1=%%di  input2=%%si input3=%%dx\' > /sys/kernel/tracing/kprobe_events"
     sin,sout,serr = ssh.exec_command(cmd)
     if serr not null:
@@ -85,7 +85,7 @@ def setKprobe(ssh, func, name):
 
 
 def setKretprobe(ssh, func, name):
-    ## echo 'r:kmalloc __kmalloc retval=$retval' >> /sys/kernel/tracing/kprobe_events
+    ## echo 'r:myretprobe __kmalloc retval=$retval' >> /sys/kernel/tracing/kprobe_events
     cmd = "echo \'r:"+name+" "+func+" retval=$retval\' >> /sys/kernel/tracing/kprobe_events"
     sin,sout,serr = ssh.exec_command(cmd)
     if serr.read() not null:
@@ -95,7 +95,7 @@ def setKretprobe(ssh, func, name):
         print("Successfully Enalbed Kretprobe (SSH)")
 
 
-def cleanProbes(ssh):
+def clearProbes(ssh):
     cmd = "echo > /sys/kernel/tracing/kprobe_events"
     sin,sout,serr = ssh.exec_command(cmd)
     print("Successfully Cleaned Probes")
@@ -105,10 +105,14 @@ def setMemFuncList(ssh, func_list):
     for func in func_list:
         setKprobe(ssh, func, func)
         setKretprobe(ssh, func, func)
+
+
 def setOpFuncList(ssh, func_list):  
     for func in func_list:
         setKprobe(ssh, func, func)
 
+
+## mount -t tracefs nodev /sys/kernel/tracing
 def mount(ssh):
     sin,sout,serr = ssh.exec_command("mount -t tracefs nodev /sys/kernel/tracing")
 

@@ -29,6 +29,32 @@ parsed allocation data:
 func     file       size  time            mem
 malloc64 test0001.c 48    1038282.286875  fffffffffffffffe
 
+
+
+
+Set kprobe:
+
+  echo 'p:myprobe __kmalloc filename=%cx input1=%di  input2=%si input3=%dx' > /sys/kernel/tracing/kprobe_events
+  
+  
+
+Set kretprobe:
+  echo 'r:myretprobe __kmalloc $retval' >> /sys/kernel/tracing/kprobe_events
+
+See Format
+  cat /sys/kernel/tracing/events/kprobes/myprobe/format
+
+Clear Trace:
+  echo > /sys/kernel/tracing/kprobe_events
+
+Enable Trace:
+  echo 1 > /sys/kernel/tracing/events/kprobes/myprobe/enable
+  echo 1 > /sys/kernel/tracing/events/kprobes/myretprobe/enable
+
+Disable Trace:
+  echo 0 > /sys/kernel/tracing/events/kprobes/myprobe/enable
+  echo 0 > /sys/kernel/tracing/events/kprobes/myretprobe/enable  
+
 '''
 def CheckKernelMemoryAlloc(args):
     
@@ -92,6 +118,12 @@ def setKretprobe(ssh, func, name):
         sys.exit(1)
     else:
         print("Successfully Enalbed Kretprobe (SSH)")
+
+
+def clearProbes(ssh):
+    cmd = "echo > /sys/kernel/tracing/kprobe_events"
+    sin,sout,serr = ssh.exec_command(cmd)
+    print("Successfully Cleaned Probes")
 
 def setMemFuncList(ssh, func_list):
 
