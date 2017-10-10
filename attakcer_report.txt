@@ -6,7 +6,7 @@ cat-2632  [000] dN..    97.963510: myretprobe: (inotify_handle_event+0x12b/0x1c0
 
 
 
-
+strcpy(trace)
 [   97.870963] 12607ac
 [   97.871449] 126086c
 [   97.871951] 126092c   《====  this one

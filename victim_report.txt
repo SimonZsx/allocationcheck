@@ -1,0 +1,1 @@
+  socket-2651  [000] d...   462.968983: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
