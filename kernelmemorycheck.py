@@ -31,30 +31,42 @@ malloc64 test0001.c 48    1038282.286875  fffffffffffffffe
 
 
 
+mount：
+
+  mount -t tracefs nodev /sys/kernel/tracing
 
 Set kprobe:
 
-  echo 'p:myprobe __kmalloc filename=%cx input1=%di  input2=%si input3=%dx' > /sys/kernel/tracing/kprobe_events
+  echo 'p:mykmalloc __kmalloc filename=%cx input1=%di  input2=%si input3=%dx' > /sys/kernel/tracing/kprobe_events
   
-  
+  echo 'p:mystrcpy strcpy filename=%cx input1=%di  input2=%si input3=%dx' >> /sys/kernel/tracing/kprobe_events
 
 Set kretprobe:
   echo 'r:myretprobe __kmalloc $retval' >> /sys/kernel/tracing/kprobe_events
 
 See Format
-  cat /sys/kernel/tracing/events/kprobes/myprobe/format
+  cat /sys/kernel/tracing/events/kprobes/mykmalloc/format
+
+  cat /sys/kernel/tracing/events/kprobes/mystrcpy/format
+
+
+  cat /sys/kernel/tracing/events/kprobes/myretprobe/format
 
 Clear Trace:
   echo > /sys/kernel/tracing/kprobe_events
 
 Enable Trace:
-  echo 1 > /sys/kernel/tracing/events/kprobes/myprobe/enable
+  echo 1 > /sys/kernel/tracing/events/kprobes/mykmalloc/enable
+  echo 1 > /sys/kernel/tracing/events/kprobes/mystrcpy/enable
   echo 1 > /sys/kernel/tracing/events/kprobes/myretprobe/enable
 
 Disable Trace:
-  echo 0 > /sys/kernel/tracing/events/kprobes/myprobe/enable
+  echo 0 > /sys/kernel/tracing/events/kprobes/mykmalloc/enable
+  echo 0 > /sys/kernel/tracing/events/kprobes/mystrcpy/enable
   echo 0 > /sys/kernel/tracing/events/kprobes/myretprobe/enable  
 
+Fetch Report:
+  cat /sys/kernel/debug/tracing/trace
 
 SCP:
 

@@ -1,0 +1,21 @@
+cat-2632  [000] d...    97.963002: mykmalloc: (__kmalloc+0x0/0x1e0) filename=0xffffffffae5b1f75 input1=0x38 input2=0x14000c0 input3=0x1ffff10000189127
+cat-2632  [000] d...    97.963009: myretprobe: (inotify_handle_event+0x12b/0x1c0 <- __kmalloc) arg1=0xffff880001260840
+
+cat-2632  [000] d...    97.963470: mykmalloc: (__kmalloc+0x0/0x1e0) filename=0xffffffffae5b1f75 input1=0x38 input2=0x14000c0 input3=0x1ffff10000189127
+cat-2632  [000] dN..    97.963510: myretprobe: (inotify_handle_event+0x12b/0x1c0 <- __kmalloc) arg1=0xffff880001260900
+
+
+
+
+[   97.870963] 12607ac
+[   97.871449] 126086c
+[   97.871951] 126092c   《====  this one
+[   98.915260] 1260d4c
+[   98.915584] 1260dac
+[   98.916206] 1260e0c
+[  100.752412] 1260f2c
+[  100.753065] 1260f8c
+[  100.753479] 226802c
+[  101.982420] 226814c
+
+[  101.982975] 22681ac
