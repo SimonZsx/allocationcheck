@@ -55,6 +55,11 @@ Disable Trace:
   echo 0 > /sys/kernel/tracing/events/kprobes/myprobe/enable
   echo 0 > /sys/kernel/tracing/events/kprobes/myretprobe/enable  
 
+
+SCP:
+
+scp -P 10022 root@localhost:/root .
+
 '''
 def CheckKernelMemoryAlloc(args):
     
