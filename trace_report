@@ -1,0 +1,412 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 401/401   #P:1
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+            bash-2630  [000] d...   362.749031: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fa502e input1=0x28 input2=0x14000c0 input3=0x1ffff100002dd76c
+            bash-2630  [000] d...   362.749048: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2be36b4 input1=0x210 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   362.749098: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2be3508 input1=0x51 input2=0x14000c0 input3=0xdffffc0000000000
+        rsyslogd-2532  [000] d...   362.777377: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+        rsyslogd-2532  [000] d...   362.777447: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+   rs:main Q:Reg-2529  [000] d...   362.777910: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+    kworker/0:1H-942   [000] d...   362.777990: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+   rs:main Q:Reg-2529  [000] d...   362.778946: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+    kworker/0:1H-942   [000] d...   362.778997: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+   rs:main Q:Reg-2529  [000] d...   362.779296: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+    kworker/0:1H-942   [000] d...   362.779475: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+      jbd2/vda-8-1100  [000] d...   368.260432: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+      jbd2/vda-8-1100  [000] d...   368.260484: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+      jbd2/vda-8-1100  [000] d...   368.260512: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+      jbd2/vda-8-1100  [000] d...   368.260536: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+      jbd2/vda-8-1100  [000] d...   368.260611: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x60 input2=0x1080020 input3=0x1080020
+      jbd2/vda-8-1100  [000] d...   368.261034: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+    kworker/0:1H-942   [000] d...   368.261116: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x20 input2=0x1080020 input3=0x1080020
+    kworker/0:1H-942   [000] d...   368.261612: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+    kworker/0:1H-942   [000] d...   368.261854: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x20 input2=0x1080020 input3=0x1080020
+    kworker/u2:0-5     [000] d...   393.860640: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+    kworker/u2:0-5     [000] d...   393.860675: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+    kworker/u2:0-5     [000] d...   393.860694: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+            bash-2630  [000] d...   398.669506: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fa502e input1=0x28 input2=0x14000c0 input3=0x1ffff100002efaa0
+            bash-2630  [000] d...   398.669519: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2be36b4 input1=0x210 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   398.669564: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2be3508 input1=0x51 input2=0x14000c0 input3=0xdffffc0000000000
+            bash-2630  [000] dN..   398.679067: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2b970ee input1=0x28 input2=0x14000c0 input3=0xdffffc0000000000
+      jbd2/vda-8-1100  [000] d...   398.980434: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+    kworker/0:1H-942   [000] d...   398.980527: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x20 input2=0x1080020 input3=0x1080020
+    kworker/u2:0-5     [000] d...   398.980644: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+    kworker/u2:0-5     [000] d...   398.980675: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+    kworker/0:1H-942   [000] d...   398.981055: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+    kworker/0:1H-942   [000] d...   398.981294: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x20 input2=0x1080020 input3=0x1080020
+            bash-2630  [000] d...   411.257553: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   411.257559: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff8800011e6d00
+            bash-2630  [000] d...   411.257605: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   411.257611: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f0880
+            bash-2630  [000] d...   411.257613: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   411.257616: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800012e5400
+            bash-2642  [000] d...   411.258233: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x1f8 input2=0x14000c0 input3=0x8
+            bash-2642  [000] d...   411.258237: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff8800013dea00
+            bash-2642  [000] d...   411.258240: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d32403 input1=0x1c input2=0x14000c0 input3=0xdffffc0000000000
+            bash-2642  [000] d...   411.258243: myretprobe: (load_elf_binary+0x42f/0x2790 <- __kmalloc) retval=0xffff8800007b5db0
+            bash-2642  [000] d...   411.258260: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x188 input2=0x14000c0 input3=0x6
+            bash-2642  [000] d...   411.258263: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff8800013df680
+            bash-2630  [000] d...   415.350510: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   415.350531: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff8800011e4480
+            bash-2630  [000] d...   415.350597: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   415.350605: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f2a80
+            bash-2630  [000] d...   415.350607: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   415.350615: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800012e5900
+             cat-2643  [000] d...   415.351694: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x1f8 input2=0x14000c0 input3=0x8
+             cat-2643  [000] d...   415.351703: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff8800013de500
+             cat-2643  [000] d...   415.351707: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d32403 input1=0x1c input2=0x14000c0 input3=0xdffffc0000000000
+             cat-2643  [000] d...   415.351714: myretprobe: (load_elf_binary+0x42f/0x2790 <- __kmalloc) retval=0xffff8800007b50c0
+             cat-2643  [000] d...   415.351746: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x188 input2=0x14000c0 input3=0x6
+             cat-2643  [000] d...   415.351754: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff8800013de000
+             cat-2643  [000] d...   415.353238: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2bb8128 input1=0x20f0 input2=0x14080c0 input3=0x20f0
+             cat-2643  [000] d...   415.353243: myretprobe: (__seq_open_private+0x21/0x80 <- __kmalloc) retval=0xffff8800028b0000
+             cat-2643  [000] d...   415.353252: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2bb815f input1=0x8 input2=0x14080c0 input3=0xdffffc0000000000
+             cat-2643  [000] d...   415.353259: myretprobe: (tracing_open+0x14b/0x690 <- __kmalloc) retval=0xffff880003188540
+            bash-2630  [000] d...   440.834263: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   440.834274: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff8800011e7a80
+            bash-2630  [000] d...   440.834359: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   440.834368: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f2200
+            bash-2630  [000] d...   440.834369: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   440.834377: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800012e5980
+              ls-2644  [000] d...   440.835484: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x1f8 input2=0x14000c0 input3=0x8
+              ls-2644  [000] d...   440.835493: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff8800013df180
+              ls-2644  [000] d...   440.835496: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d32403 input1=0x1c input2=0x14000c0 input3=0xdffffc0000000000
+              ls-2644  [000] d...   440.835504: myretprobe: (load_elf_binary+0x42f/0x2790 <- __kmalloc) retval=0xffff8800007b5420
+              ls-2644  [000] d...   440.835556: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x188 input2=0x14000c0 input3=0x6
+              ls-2644  [000] d...   440.835563: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff8800013dec80
+              ls-2644  [000] d...   440.838192: myprobe: (__kmalloc+0x0/0x1e0) filename=0x1 input1=0x32 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838200: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722300
+              ls-2644  [000] d...   440.838202: myprobe: (__kmalloc+0x0/0x1e0) filename=0x2 input1=0x33 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838210: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722360
+              ls-2644  [000] d...   440.838212: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838219: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007223c0
+              ls-2644  [000] d...   440.838221: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838228: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722420
+              ls-2644  [000] d...   440.838230: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838237: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722480
+              ls-2644  [000] d...   440.838239: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838246: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007224e0
+              ls-2644  [000] d...   440.838249: myprobe: (__kmalloc+0x0/0x1e0) filename=0x4 input1=0x35 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838257: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722540
+              ls-2644  [000] d...   440.838259: myprobe: (__kmalloc+0x0/0x1e0) filename=0xa input1=0x3b input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838277: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007225a0
+              ls-2644  [000] d...   440.838279: myprobe: (__kmalloc+0x0/0x1e0) filename=0xd input1=0x3e input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838286: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722600
+              ls-2644  [000] d...   440.838288: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838306: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722660
+              ls-2644  [000] d...   440.838308: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+              ls-2644  [000] d...   440.838315: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007226c0
+            bash-2630  [000] d...   443.424261: myprobe: (__kmalloc+0x0/0x1e0) filename=0x1 input1=0x32 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424271: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722780
+            bash-2630  [000] d...   443.424273: myprobe: (__kmalloc+0x0/0x1e0) filename=0x2 input1=0x33 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424280: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007227e0
+            bash-2630  [000] d...   443.424282: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424288: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722840
+            bash-2630  [000] d...   443.424290: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424297: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007228a0
+            bash-2630  [000] d...   443.424298: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424305: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722900
+            bash-2630  [000] d...   443.424319: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424326: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722960
+            bash-2630  [000] d...   443.424328: myprobe: (__kmalloc+0x0/0x1e0) filename=0x4 input1=0x35 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424335: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007229c0
+            bash-2630  [000] d...   443.424337: myprobe: (__kmalloc+0x0/0x1e0) filename=0xa input1=0x3b input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424343: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722a20
+            bash-2630  [000] d...   443.424345: myprobe: (__kmalloc+0x0/0x1e0) filename=0xd input1=0x3e input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424352: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722a80
+            bash-2630  [000] d...   443.424353: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424360: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722ae0
+            bash-2630  [000] d...   443.424362: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   443.424369: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722b40
+            bash-2630  [000] d...   443.862419: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   443.862437: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff8800011e6400
+            bash-2630  [000] d...   443.862556: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   443.862578: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f3300
+            bash-2630  [000] d...   443.862579: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   443.862588: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800012e5a80
+         inotify-2645  [000] d...   443.864395: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.864419: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5b00
+         inotify-2645  [000] d...   443.864534: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x60 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.864564: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800012e5d80
+         inotify-2645  [000] d...   443.865129: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x150 input2=0x14000c0 input3=0x5
+         inotify-2645  [000] d...   443.865137: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff8800013dfb80
+         inotify-2645  [000] d...   443.866629: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.866655: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5880
+         inotify-2645  [000] d...   443.866737: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.866756: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5780
+         inotify-2645  [000] d...   443.866898: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x70 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.866922: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800016c4f00
+         inotify-2645  [000] d...   443.866949: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.866970: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800007220c0
+         inotify-2645  [000] d...   443.867521: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.867549: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5700
+         inotify-2645  [000] d...   443.867656: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x120 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.867682: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800013df900
+         inotify-2645  [000] d...   443.867776: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.867802: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5680
+         inotify-2645  [000] d...   443.867929: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x160 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.867941: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800013de280
+         inotify-2645  [000] d...   443.868366: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.868393: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5600
+         inotify-2645  [000] d...   443.868509: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x130 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.868531: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001240c80
+         inotify-2645  [000] d...   443.868978: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.869006: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5580
+         inotify-2645  [000] d...   443.869112: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x100 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.869160: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff88000154c500
+         inotify-2645  [000] d...   443.869532: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.869544: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5500
+         inotify-2645  [000] d...   443.869609: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x80 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.869629: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800016c4300
+         inotify-2645  [000] d...   443.869994: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.870017: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5480
+         inotify-2645  [000] d...   443.870106: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x60 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.870128: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800012e5280
+         inotify-2645  [000] d...   443.870493: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.870516: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5300
+         inotify-2645  [000] d...   443.870578: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.870600: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800012e5200
+         inotify-2645  [000] d...   443.871020: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.871033: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5380
+         inotify-2645  [000] d...   443.871071: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.871094: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800012e5e00
+         inotify-2645  [000] d...   443.871230: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+         inotify-2645  [000] d...   443.871256: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff8800012e5e80
+         inotify-2645  [000] d...   443.871472: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+         inotify-2645  [000] d...   443.871493: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800012e5f00
+            bash-2630  [000] d...   447.197160: myprobe: (__kmalloc+0x0/0x1e0) filename=0x1 input1=0x32 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197171: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722060
+            bash-2630  [000] d...   447.197173: myprobe: (__kmalloc+0x0/0x1e0) filename=0x2 input1=0x33 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197180: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722c00
+            bash-2630  [000] d...   447.197183: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197190: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722c60
+            bash-2630  [000] d...   447.197192: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197210: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722cc0
+            bash-2630  [000] d...   447.197211: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197218: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722d20
+            bash-2630  [000] d...   447.197220: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197226: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722d80
+            bash-2630  [000] d...   447.197228: myprobe: (__kmalloc+0x0/0x1e0) filename=0x4 input1=0x35 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197235: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722de0
+            bash-2630  [000] d...   447.197236: myprobe: (__kmalloc+0x0/0x1e0) filename=0xa input1=0x3b input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197254: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722e40
+            bash-2630  [000] d...   447.197256: myprobe: (__kmalloc+0x0/0x1e0) filename=0xd input1=0x3e input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197263: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722ea0
+            bash-2630  [000] d...   447.197265: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197272: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722f00
+            bash-2630  [000] d...   447.197274: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   447.197281: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000722f60
+            bash-2630  [000] d...   447.823737: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   447.823748: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff8800011e5b00
+            bash-2630  [000] d...   447.823840: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   447.823848: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f0000
+            bash-2630  [000] d...   447.823849: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   447.823857: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800012e5f80
+            bash-2646  [000] d...   447.824924: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x150 input2=0x14000c0 input3=0x5
+            bash-2646  [000] d...   447.824943: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001241900
+            bash-2630  [000] d...   454.221782: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   454.221796: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff8800011e7180
+            bash-2630  [000] d...   454.221906: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   454.221917: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f3b80
+            bash-2630  [000] d...   454.221919: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   454.221929: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800012e5080
+         inotify-2647  [000] d...   454.223561: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x150 input2=0x14000c0 input3=0x5
+         inotify-2647  [000] d...   454.223573: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001240000
+            bash-2630  [000] d...   456.229416: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   456.229428: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff88000335b600
+            bash-2630  [000] d...   456.229508: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   456.229517: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f4400
+            bash-2630  [000] d...   456.229518: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   456.229527: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800012e5000
+              ls-2648  [000] d...   456.230742: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x1f8 input2=0x14000c0 input3=0x8
+              ls-2648  [000] d...   456.230752: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001241400
+              ls-2648  [000] d...   456.230757: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d32403 input1=0x1c input2=0x14000c0 input3=0xdffffc0000000000
+              ls-2648  [000] d...   456.230765: myretprobe: (load_elf_binary+0x42f/0x2790 <- __kmalloc) retval=0xffff8800007b5de0
+              ls-2648  [000] d...   456.230800: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x188 input2=0x14000c0 input3=0x6
+              ls-2648  [000] d...   456.230808: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001240280
+              ls-2648  [000] d...   456.233705: myprobe: (__kmalloc+0x0/0x1e0) filename=0x1 input1=0x32 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233715: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800016ebf60
+              ls-2648  [000] d...   456.233718: myprobe: (__kmalloc+0x0/0x1e0) filename=0x2 input1=0x33 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233726: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800016ebc60
+              ls-2648  [000] d...   456.233729: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233737: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800016ebea0
+              ls-2648  [000] d...   456.233739: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233747: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800016ebf00
+              ls-2648  [000] d...   456.233749: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233757: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800016ebb40
+              ls-2648  [000] d...   456.233759: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233767: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800016eb4e0
+              ls-2648  [000] d...   456.233769: myprobe: (__kmalloc+0x0/0x1e0) filename=0x4 input1=0x35 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233781: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720000
+              ls-2648  [000] d...   456.233784: myprobe: (__kmalloc+0x0/0x1e0) filename=0xa input1=0x3b input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233791: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720060
+              ls-2648  [000] d...   456.233794: myprobe: (__kmalloc+0x0/0x1e0) filename=0xd input1=0x3e input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233802: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007200c0
+              ls-2648  [000] d...   456.233804: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233812: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720120
+              ls-2648  [000] d...   456.233814: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+              ls-2648  [000] d...   456.233822: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720180
+            bash-2630  [000] d...   457.797204: myprobe: (__kmalloc+0x0/0x1e0) filename=0x1 input1=0x32 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797216: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720240
+            bash-2630  [000] d...   457.797219: myprobe: (__kmalloc+0x0/0x1e0) filename=0x2 input1=0x33 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797226: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007202a0
+            bash-2630  [000] d...   457.797228: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797235: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720300
+            bash-2630  [000] d...   457.797237: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797244: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720360
+            bash-2630  [000] d...   457.797246: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797253: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007203c0
+            bash-2630  [000] d...   457.797255: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797262: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720420
+            bash-2630  [000] d...   457.797264: myprobe: (__kmalloc+0x0/0x1e0) filename=0x4 input1=0x35 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797271: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720480
+            bash-2630  [000] d...   457.797273: myprobe: (__kmalloc+0x0/0x1e0) filename=0xa input1=0x3b input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797280: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007204e0
+            bash-2630  [000] d...   457.797282: myprobe: (__kmalloc+0x0/0x1e0) filename=0xd input1=0x3e input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797289: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720540
+            bash-2630  [000] d...   457.797291: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797315: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007205a0
+            bash-2630  [000] d...   457.797318: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   457.797325: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720600
+            bash-2630  [000] d...   460.228693: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   460.228701: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff880001103180
+            bash-2630  [000] d...   460.228745: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   460.228750: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f4c80
+            bash-2630  [000] d...   460.228750: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   460.228755: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff880003117f00
+          fileop-2649  [000] d...   460.229387: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.229394: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880003397680
+          fileop-2649  [000] d...   460.229431: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.229438: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800007206c0
+          fileop-2649  [000] d...   460.229682: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x150 input2=0x14000c0 input3=0x5
+          fileop-2649  [000] d...   460.229687: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001240780
+          fileop-2649  [000] d...   460.230044: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.230052: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053600
+          fileop-2649  [000] d...   460.230090: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x160 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.230099: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001241680
+          fileop-2649  [000] d...   460.230398: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.230405: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053680
+          fileop-2649  [000] d...   460.230432: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x80 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.230440: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800016c4240
+          fileop-2649  [000] d...   460.230665: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.230672: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053500
+          fileop-2649  [000] d...   460.230705: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x70 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.230712: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800016c43c0
+          fileop-2649  [000] d...   460.230925: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.230931: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053580
+          fileop-2649  [000] d...   460.230963: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x70 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.230970: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800016c4000
+          fileop-2649  [000] d...   460.231199: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.231205: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053100
+          fileop-2649  [000] d...   460.231236: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x70 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.231243: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800016c4900
+          fileop-2649  [000] d...   460.231471: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.231477: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053080
+          fileop-2649  [000] d...   460.231502: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.231509: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053200
+          fileop-2649  [000] d...   460.231673: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.231679: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053180
+          fileop-2649  [000] d...   460.231702: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.231709: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053300
+          fileop-2649  [000] d...   460.231862: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.231868: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053280
+          fileop-2649  [000] d...   460.231891: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.231897: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053400
+          fileop-2649  [000] d...   460.232019: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          fileop-2649  [000] d...   460.232027: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053380
+          fileop-2649  [000] d...   460.232051: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+          fileop-2649  [000] d...   460.232059: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880000720720
+            bash-2630  [000] d...   462.542179: myprobe: (__kmalloc+0x0/0x1e0) filename=0x1 input1=0x32 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542192: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007207e0
+            bash-2630  [000] d...   462.542196: myprobe: (__kmalloc+0x0/0x1e0) filename=0x2 input1=0x33 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542205: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720840
+            bash-2630  [000] d...   462.542207: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542216: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007208a0
+            bash-2630  [000] d...   462.542218: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542226: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720900
+            bash-2630  [000] d...   462.542229: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542237: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720960
+            bash-2630  [000] d...   462.542240: myprobe: (__kmalloc+0x0/0x1e0) filename=0x6 input1=0x37 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542248: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff8800007209c0
+            bash-2630  [000] d...   462.542251: myprobe: (__kmalloc+0x0/0x1e0) filename=0x4 input1=0x35 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542259: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720a20
+            bash-2630  [000] d...   462.542262: myprobe: (__kmalloc+0x0/0x1e0) filename=0xa input1=0x3b input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542270: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720a80
+            bash-2630  [000] d...   462.542273: myprobe: (__kmalloc+0x0/0x1e0) filename=0xd input1=0x3e input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542281: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720ae0
+            bash-2630  [000] d...   462.542284: myprobe: (__kmalloc+0x0/0x1e0) filename=0x7 input1=0x38 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542292: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720b40
+            bash-2630  [000] d...   462.542295: myprobe: (__kmalloc+0x0/0x1e0) filename=0x8 input1=0x39 input2=0x14080c0 input3=0x0
+            bash-2630  [000] d...   462.542327: myretprobe: (ext4_htree_store_dirent+0x5c/0x200 <- __kmalloc) retval=0xffff880000720ba0
+            bash-2630  [000] d...   462.967507: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   462.967519: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff880001102880
+            bash-2630  [000] d...   462.967599: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   462.967609: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f5500
+            bash-2630  [000] d...   462.967610: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   462.967620: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff880001053780
+          socket-2651  [000] d...   462.968898: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.968914: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053480
+          socket-2651  [000] d...   462.968983: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.969001: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880000720c60
+          socket-2651  [000] d...   462.969374: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x150 input2=0x14000c0 input3=0x5
+          socket-2651  [000] d...   462.969385: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001240500
+          socket-2651  [000] d...   462.970165: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.970184: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053800
+          socket-2651  [000] d...   462.970269: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x100 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.970290: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff8800015483c0
+          socket-2651  [000] d...   462.970655: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.970670: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053700
+          socket-2651  [000] d...   462.970734: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x60 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.970751: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053900
+          socket-2651  [000] d...   462.971068: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.971082: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053880
+          socket-2651  [000] d...   462.971160: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.971177: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053b00
+          socket-2651  [000] d...   462.971554: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.971569: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053980
+          socket-2651  [000] d...   462.971642: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.971658: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053e00
+          socket-2651  [000] d...   462.972088: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.972103: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053d00
+          socket-2651  [000] d...   462.972174: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.972189: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053a80
+          socket-2651  [000] d...   462.972522: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.972536: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053c80
+          socket-2651  [000] d...   462.972590: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x50 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.972605: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880001053f00
+          socket-2651  [000] d...   462.972879: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.972895: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053000
+          socket-2651  [000] d...   462.972944: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.972959: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880000720cc0
+          socket-2651  [000] d...   462.973212: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.973225: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053d80
+          socket-2651  [000] d...   462.973274: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x40 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.973290: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880000720d20
+          socket-2651  [000] d...   462.973564: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d7a229 input1=0x60 input2=0x1408040 input3=0xdffffc0000000000
+          socket-2651  [000] d...   462.973580: myretprobe: (ext4_find_extent+0x3cf/0x450 <- __kmalloc) retval=0xffff880001053f80
+          socket-2651  [000] d...   462.973633: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa30dfbb7 input1=0x30 input2=0x1080020 input3=0x1080020
+          socket-2651  [000] d...   462.973651: myretprobe: (alloc_indirect.isra.14+0x23/0x70 <- __kmalloc) retval=0xffff880000720d80
+            bash-2630  [000] d...   468.941637: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2fb24db input1=0x280 input2=0x15080c0 input3=0x0
+            bash-2630  [000] d...   468.941651: myretprobe: (alloc_pipe_info+0x131/0x210 <- __kmalloc) retval=0xffff880001100900
+            bash-2630  [000] d...   468.941740: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd57 input1=0x800 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   468.941751: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff8800004f5d80
+            bash-2630  [000] d...   468.941753: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2cdbd8d input1=0x48 input2=0x15012c0 input3=0xdffffc0000000000
+            bash-2630  [000] d...   468.941763: myretprobe: (alloc_fdmem+0x20/0x50 <- __kmalloc) retval=0xffff880001053e80
+             cat-2653  [000] d...   468.943235: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x1f8 input2=0x14000c0 input3=0x8
+             cat-2653  [000] d...   468.943246: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001240a00
+             cat-2653  [000] d...   468.943251: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d32403 input1=0x1c input2=0x14000c0 input3=0xdffffc0000000000
+             cat-2653  [000] d...   468.943259: myretprobe: (load_elf_binary+0x42f/0x2790 <- __kmalloc) retval=0xffff8800010b0f60
+             cat-2653  [000] d...   468.943298: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2d3199e input1=0x188 input2=0x14000c0 input3=0x6
+             cat-2653  [000] d...   468.943356: myretprobe: (load_elf_phdrs+0x7b/0xb0 <- __kmalloc) retval=0xffff880001240f00
+             cat-2653  [000] d...   468.945499: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2bb8128 input1=0x20f0 input2=0x14080c0 input3=0x20f0
+             cat-2653  [000] d...   468.945507: myretprobe: (__seq_open_private+0x21/0x80 <- __kmalloc) retval=0xffff880001070000
+             cat-2653  [000] d...   468.945519: myprobe: (__kmalloc+0x0/0x1e0) filename=0xffffffffa2bb815f input1=0x8 input2=0x14080c0 input3=0xdffffc0000000000
+             cat-2653  [000] d...   468.945529: myretprobe: (tracing_open+0x14b/0x690 <- __kmalloc) retval=0xffff880003188540
