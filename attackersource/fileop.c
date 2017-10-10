@@ -14,7 +14,7 @@ void *callrename( void *ptr );
 void *openclose( void *ptr );
 void *_socket( void *ptr);
 
-char *ctrl = (char *)malloc(16*sizeof(char)); 
+//char *ctrl = (char *)malloc(16*sizeof(char)); 
 
 
 main()
@@ -51,10 +51,10 @@ main()
 }
 
 
-void *_socket (void *ptr){
+//void *_socket (void *ptr){
 
-     socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-}
+//     socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+//}
 
 
 void *openclose( void *ptr )
